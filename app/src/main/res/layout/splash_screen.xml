@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/splash"
         android:layout_width="693dp"
         android:layout_height="1098dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,8 +27,8 @@
         android:textColor="#FFFFFF"
         android:textSize="50sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        app:layout_constraintEnd_toStartOf="@+id/splash"
         app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        app:layout_constraintStart_toEndOf="@+id/splash"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

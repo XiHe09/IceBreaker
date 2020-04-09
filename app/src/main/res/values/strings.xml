@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Ice Breaker</string>
     <string name="splash">ICE BREAKER</string>
+    <string name="W">\"W\"</string>
+    <string name="OR">OR</string>
+    <string name="IF">IF</string>
+    <string name="GAME">GAME</string>
 </resources>
