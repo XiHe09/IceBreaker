@@ -20,13 +20,19 @@
             -->
         <item
             android:id="@+id/frag1"
-            android:title="All Tasks" />
+            android:title="@string/Home" />
         <item
             android:id="@+id/frag2"
-            android:title="My Tasks" />
+            android:title="@string/W" />
         <item
-            android:id="@+id/add_task"
-            android:title="Add Task" />
+            android:id="@+id/frag3"
+            android:title="@string/OR" />
+        <item
+            android:id="@+id/frag4"
+            android:title="@string/IF" />
+        <item
+            android:id="@+id/frag5"
+            android:title="@string/GAME" />
     </group>
 
     <!--

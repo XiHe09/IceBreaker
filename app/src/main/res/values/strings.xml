@@ -5,4 +5,15 @@
     <string name="OR">OR</string>
     <string name="IF">IF</string>
     <string name="GAME">GAME</string>
+    <string name="Home">Home</string>
+    <string name="header1">Ice Breaker</string>
+    <string name="header2">It melts the ice</string>
+    <string name="WHO">WHO</string>
+    <string name="WHAT">WHAT</string>
+    <string name="WHEN">WHEN</string>
+    <string name="WHY">WHY</string>
+    <string name="WHERE">WHERE</string>
+    <string name="random">Go Random!</string>
+    <string name="SKIP">SKIP</string>
+    <string name="NEXT">NEXT</string>
 </resources>
