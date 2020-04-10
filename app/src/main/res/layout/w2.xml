@@ -15,6 +15,7 @@
         tools:text="temp" />
 
     <ListView
+        android:id="@+id/w_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

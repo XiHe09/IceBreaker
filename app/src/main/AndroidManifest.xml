@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".WActivity"></activity>
+        <activity android:name=".OrActivity"></activity>
     </application>
 
 </manifest>

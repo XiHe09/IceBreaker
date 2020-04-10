@@ -16,4 +16,6 @@
     <string name="random">Go Random!</string>
     <string name="SKIP">SKIP</string>
     <string name="NEXT">NEXT</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

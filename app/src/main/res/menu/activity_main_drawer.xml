@@ -19,19 +19,19 @@
             android:title="temp" />
             -->
         <item
-            android:id="@+id/frag1"
+            android:id="@+id/drawer_home"
             android:title="@string/Home" />
         <item
-            android:id="@+id/frag2"
+            android:id="@+id/drawer_w"
             android:title="@string/W" />
         <item
-            android:id="@+id/frag3"
+            android:id="@+id/drawer_or"
             android:title="@string/OR" />
         <item
-            android:id="@+id/frag4"
+            android:id="@+id/drawer_if"
             android:title="@string/IF" />
         <item
-            android:id="@+id/frag5"
+            android:id="@+id/drawer_game"
             android:title="@string/GAME" />
     </group>
 
