@@ -37,14 +37,14 @@ public class OrActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    // create settings action button
+    // create clear action button
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.clear_button, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
-    // handle setting button activities
+    // handle clear button activities
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
