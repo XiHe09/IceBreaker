@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <!--
+        <item
+            android:id="@+id/nav_camera"
+            android:title="temp" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:title="temp" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:title="temp" />
+        <item
+            android:id="@+id/nav_manage"
+            android:title="temp" />
+            -->
+        <item
+            android:id="@+id/frag1"
+            android:title="All Tasks" />
+        <item
+            android:id="@+id/frag2"
+            android:title="My Tasks" />
+        <item
+            android:id="@+id/add_task"
+            android:title="Add Task" />
+    </group>
+
+    <!--
+    <item android:title="Fragments">
+        <menu>
+            <item
+                android:id="@+id/frag1"
+                android:title="Fragment 1" />
+            <item
+                android:id="@+id/frag2"
+                android:title="Fragment 2" />
+        </menu>
+    </item>
+-->
+</menu>
