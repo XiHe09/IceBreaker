@@ -5,6 +5,7 @@
 - Added tic-tac-toe to online game
 - Completed drawer menu
 - Completed all major layouts
+
 Currently the app's main structures are all in place as well as layouts.
 All navigation components are done and could be copy pasted to new screens as needed in future
 iterations.
