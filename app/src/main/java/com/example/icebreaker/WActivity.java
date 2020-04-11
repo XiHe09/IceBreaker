@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
@@ -56,5 +57,35 @@ public class WActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void what_clicked(View view) {
+        Intent intent = new Intent(WActivity.this, WSubActivity.class);
+        intent.putExtra(getString(R.string.w_intent_key),"WHAT");
+        startActivity(intent);
+    }
+
+    public void who_clicked(View view) {
+        Intent intent = new Intent(WActivity.this, WSubActivity.class);
+        intent.putExtra(getString(R.string.w_intent_key),"WHO");
+        startActivity(intent);
+    }
+
+    public void when_clicked(View view) {
+        Intent intent = new Intent(WActivity.this, WSubActivity.class);
+        intent.putExtra(getString(R.string.w_intent_key),"WHEN");
+        startActivity(intent);
+    }
+
+    public void why_clicked(View view) {
+        Intent intent = new Intent(WActivity.this, WSubActivity.class);
+        intent.putExtra(getString(R.string.w_intent_key),"WHY");
+        startActivity(intent);
+    }
+
+    public void where_clicked(View view) {
+        Intent intent = new Intent(WActivity.this, WSubActivity.class);
+        intent.putExtra(getString(R.string.w_intent_key),"WHERE");
+        startActivity(intent);
     }
 }

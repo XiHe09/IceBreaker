@@ -20,4 +20,38 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="ONLINE">ONLINE</string>
     <string name="INPERSON">INPERSON</string>
+    <string name="w_intent_key">w_intent_key</string>
+
+    <string-array
+        name="what_list">
+        <item>What is the scariest thing you have done for fun?</item>
+        <item>What was in your high school locker?</item>
+        <item>What is your real favorite movie?</item>
+        <item>What movie do you pretend is your favorite to sound cultured?</item>
+        <item>What is in the trunk of your car right now?</item>
+        <item>What is the best gift anyone\'s ever given you?</item>
+    </string-array>
+
+    <string-array
+        name="who_list">
+        <item>Who do you admire the most?</item>
+        <item>Who is your favorite actor?</item>
+        <item>Who is your favorite fictional character?</item>
+    </string-array>
+
+    <string-array
+        name="when_list">
+        <item>Placeholder</item>
+    </string-array>
+
+    <string-array
+        name="why_list">
+        <item>Placeholder</item>
+    </string-array>
+
+    <string-array
+        name="where_list">
+        <item>Placeholder</item>
+    </string-array>
+
 </resources>

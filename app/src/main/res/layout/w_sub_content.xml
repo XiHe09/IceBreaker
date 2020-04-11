@@ -5,8 +5,19 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/WToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
-        android:id="@+id/Button20"
+        android:id="@+id/wTitleButton"
         android:layout_width="match_parent"
         android:layout_height="122dp"
         android:background="@color/b1"
@@ -14,8 +25,8 @@
         android:textSize="52sp"
         tools:text="temp" />
 
-    <ListView
-        android:id="@+id/w_list"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/w_list_rview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

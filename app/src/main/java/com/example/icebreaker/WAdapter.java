@@ -60,7 +60,7 @@ public class WAdapter extends RecyclerView.Adapter<WAdapter.WViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull WViewHolder holder, int position) {
         WItem currentItem = WList.get(position);
-
+        holder.question.setChecked(currentItem.isDone());
         holder.question.setText(currentItem.getQuestion());
     }
 
