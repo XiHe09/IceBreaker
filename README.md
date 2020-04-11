@@ -12,6 +12,6 @@ iterations.\
 Many features rely on data base integration which is in a future sprint. However we included some\
 temporary hard coded data in the local resources for "WHAT" and "WHO".\
 Clear button does not work yet because implementing it without a database in place is not a good\
-use of development time, but button logic are all in place and could be done easily.\
+use of development time, but button logic are all in place and could be done easily.
 
 
