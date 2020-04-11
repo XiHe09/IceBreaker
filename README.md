@@ -1,10 +1,13 @@
 # TeamB-IceBreaker
 ## Iteration 1
 - Completed Main Screen
-- Completed "W" main structure
+- Completed "W" layout and basic logic
+- Added demo list items to "W" (specifically WHO and WHY)
+- Completed "OR" layout
+- Completed "Game" layout
 - Added tic-tac-toe to online game
-- Completed drawer menu
-- Completed all major layouts
+- Completed drawer menu and associated logic
+- Completed all action bar items
 
 Currently the app's main structures are all in place as well as layouts.\
 All navigation components are done and could be copy pasted to new screens as needed in future\
