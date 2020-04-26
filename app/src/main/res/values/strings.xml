@@ -52,4 +52,11 @@
     <string-array name="if_list">
         <item>Placeholder</item>
     </string-array>
+
+    <string-array name="Or_list">
+        <item>APPLE; BANANA</item>
+        <item>SEA; BEACH</item>
+        <item>DOG; CAT</item>
+        <item>MARVEL; DC</item>
+    </string-array>
 </resources>
