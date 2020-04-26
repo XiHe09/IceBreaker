@@ -3,12 +3,14 @@ package com.example.icebreaker;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -19,9 +21,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
 
 public class GameActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
@@ -45,15 +44,18 @@ public class GameActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        createWebView();
+        createOnlineView();
     }
 
-    public void createWebView() {
+    public void createOnlineView() {
+        setContentView(R.layout.g_content);
         WebView myWebView = (WebView) findViewById(R.id.webview);
         myWebView.loadUrl("https://playtictactoe.org/");
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         myWebView.setWebViewClient(new WebViewClient(){
+
+
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 if (url != null && (url.startsWith("http://") || url.startsWith("https://"))) {
                     view.getContext().startActivity(
@@ -64,47 +66,37 @@ public class GameActivity extends AppCompatActivity
                 }
             }
         });
-        Button online = findViewById(R.id.onlineButton);
-        Button inperson = findViewById(R.id.inPersonButton);
-        online.setBackgroundColor(getResources().getColor(R.color.b12));
-        inperson.setBackgroundColor(getResources().getColor(R.color.b11));
     }
 
-    public void createWebView2() {
-        WebView myWebView = (WebView) findViewById(R.id.webview);
-        myWebView.loadUrl("https://creativetechguy.com/utilities/randomtimer");
-        WebSettings webSettings = myWebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        myWebView.setWebViewClient(new WebViewClient(){
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                if (url != null && (url.startsWith("http://") || url.startsWith("https://"))) {
-                    view.getContext().startActivity(
-                            new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
-                    return true;
-                } else {
-                    return false;
-                }
+    public void createInPersonView() {
+        setContentView(R.layout.g_content2);
+        final Button button = (Button) findViewById(R.id.startButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // your handler code here
+                new CountDownTimer(2000, 1000) {
+
+                    public void onTick(long millisUntilFinished) {
+                        //do nothing
+                    }
+
+                    public void onFinish() {
+                        ImageView myImage = (ImageView) findViewById(R.id.potatoView);
+                        myImage.setImageResource(R.drawable.penguins);
+                    }
+                }.start();
+
             }
-
-            //InputStream is = getApplicationContext().getAssets().open()
-            //Reader r = new InputStreamReader(is);
-            //String details = Utils.readertoString(r);
-            //details = details.replace("%product_name%",productName );
         });
-        Button online = findViewById(R.id.onlineButton);
-        Button inperson = findViewById(R.id.inPersonButton);
-        online.setBackgroundColor(getResources().getColor(R.color.b11));
-        inperson.setBackgroundColor(getResources().getColor(R.color.b12));
-
     }
 
     public void inPersonClicked(View view) {
-        createWebView2();
+        createInPersonView();
 
     }
 
     public void onlineClicked(View view) {
-        createWebView();
+        createOnlineView();
     }
 
     @Override

@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/b11"
+            android:background="@color/b12"
             android:onClick="onlineClicked"
             android:text="@string/ONLINE" />
 
@@ -48,14 +48,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/b12"
+            android:background="@color/b11"
             android:onClick="inPersonClicked"
             android:text="@string/INPERSON" />
 
     </LinearLayout>
 
-    <WebView
-        android:id="@+id/webview"
+    <TextView
+        android:id="@+id/instructionView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:text="@string/hot_potato_instruction"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/potatoView"
+        android:layout_width="match_parent"
+        android:layout_height="369dp"
+        app:srcCompat="@mipmap/potato_foreground" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="166dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/START_GAME" />
+
 </LinearLayout>
