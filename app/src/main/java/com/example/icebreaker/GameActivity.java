@@ -21,6 +21,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.Random;
+
 
 public class GameActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
@@ -70,11 +72,15 @@ public class GameActivity extends AppCompatActivity
 
     public void createInPersonView() {
         setContentView(R.layout.g_content2);
+        ImageView myImage = (ImageView) findViewById(R.id.potatoView);
+        myImage.setImageResource(R.mipmap.potato);
         final Button button = (Button) findViewById(R.id.startButton);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // your handler code here
-                new CountDownTimer(2000, 1000) {
+                button.setVisibility(View.GONE);
+                final int random = new Random().nextInt(21) + 5;
+                new CountDownTimer(random * 1000, 1000) {
 
                     public void onTick(long millisUntilFinished) {
                         //do nothing
@@ -82,7 +88,8 @@ public class GameActivity extends AppCompatActivity
 
                     public void onFinish() {
                         ImageView myImage = (ImageView) findViewById(R.id.potatoView);
-                        myImage.setImageResource(R.drawable.penguins);
+                        myImage.setImageResource(R.mipmap.redpotato);
+                        button.setVisibility(View.VISIBLE);
                     }
                 }.start();
 
