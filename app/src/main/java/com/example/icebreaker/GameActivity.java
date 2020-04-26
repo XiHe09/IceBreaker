@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -16,6 +18,10 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 
 public class GameActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
@@ -58,6 +64,47 @@ public class GameActivity extends AppCompatActivity
                 }
             }
         });
+        Button online = findViewById(R.id.onlineButton);
+        Button inperson = findViewById(R.id.inPersonButton);
+        online.setBackgroundColor(getResources().getColor(R.color.b12));
+        inperson.setBackgroundColor(getResources().getColor(R.color.b11));
+    }
+
+    public void createWebView2() {
+        WebView myWebView = (WebView) findViewById(R.id.webview);
+        myWebView.loadUrl("https://creativetechguy.com/utilities/randomtimer");
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        myWebView.setWebViewClient(new WebViewClient(){
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                if (url != null && (url.startsWith("http://") || url.startsWith("https://"))) {
+                    view.getContext().startActivity(
+                            new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            //InputStream is = getApplicationContext().getAssets().open()
+            //Reader r = new InputStreamReader(is);
+            //String details = Utils.readertoString(r);
+            //details = details.replace("%product_name%",productName );
+        });
+        Button online = findViewById(R.id.onlineButton);
+        Button inperson = findViewById(R.id.inPersonButton);
+        online.setBackgroundColor(getResources().getColor(R.color.b11));
+        inperson.setBackgroundColor(getResources().getColor(R.color.b12));
+
+    }
+
+    public void inPersonClicked(View view) {
+        createWebView2();
+
+    }
+
+    public void onlineClicked(View view) {
+        createWebView();
     }
 
     @Override
