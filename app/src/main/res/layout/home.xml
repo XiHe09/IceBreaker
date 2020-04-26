@@ -90,6 +90,7 @@
         android:layout_height="112sp"
         android:background="@color/b2"
         android:fontFamily="serif-monospace"
+        android:onClick="if_clicked"
         android:text="@string/IF"
         android:textColor="#F9F9F9"
         android:textSize="52sp"

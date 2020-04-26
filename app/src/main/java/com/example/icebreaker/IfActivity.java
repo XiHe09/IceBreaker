@@ -21,7 +21,7 @@ public class IfActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_if);
-        Toolbar toolbar = findViewById(R.id.WToolbar);
+        Toolbar toolbar = findViewById(R.id.IfToolbar);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -52,6 +52,9 @@ public class IfActivity extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.drawer_game) {
             Intent intent = new Intent(IfActivity.this, GameActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.drawer_if) {
+            Intent intent = new Intent(IfActivity.this, IfActivity.class);
             startActivity(intent);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

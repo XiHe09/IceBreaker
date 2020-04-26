@@ -56,6 +56,9 @@ public class WActivity extends AppCompatActivity
         } else if (id == R.id.drawer_game) {
             Intent intent = new Intent(WActivity.this, GameActivity.class);
             startActivity(intent);
+        } else if (id == R.id.drawer_if) {
+            Intent intent = new Intent(WActivity.this, IfActivity.class);
+            startActivity(intent);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
