@@ -31,16 +31,6 @@
         app:layout_constraintTop_toBottomOf="@+id/OrToolbar"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ListView
-        android:id="@+id/list_view"
-        android:layout_width="match_parent"
-        android:layout_height="460dp"
-        app:layout_constraintBottom_toTopOf="@+id/go_random"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintTop_toBottomOf="@+id/orTitleButton"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <Button
         android:id="@+id/go_random"
         android:layout_width="match_parent"
@@ -54,5 +44,14 @@
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Or_list_rview"
+        android:layout_width="409dp"
+        android:layout_height="473dp"
+        app:layout_constraintBottom_toTopOf="@+id/go_random"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orTitleButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

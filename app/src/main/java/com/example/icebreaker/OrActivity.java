@@ -11,11 +11,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+import static com.example.icebreaker.IfActivity.IfItemList;
+
 public class OrActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
+
+    private RecyclerView RecyclerView;
+    private OrAdapter Adapter;
+    private RecyclerView.LayoutManager LayoutManager;
+    public static ArrayList<WItem> OrItemList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +48,8 @@ public class OrActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        populateList();
+        buildRecyclerView();
     }
 
     // create clear action button
@@ -78,5 +93,41 @@ public class OrActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void populateList() {
+        OrItemList = new ArrayList<>();
+        for (String question: getResources().getStringArray(R.array.Or_list)) {
+            OrItemList.add(new WItem(false, question));
+            System.out.println("Added item: "+question);
+        }
+        Collections.sort(OrItemList, new Comparator<WItem>() {
+            @Override
+            public int compare(WItem o1, WItem o2) {
+                if (o1.isDone() == o2.isDone()) {
+                    return 0;
+                } else if (o1.isDone()) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            }
+        });
+    }
+
+    public void buildRecyclerView() {
+        RecyclerView = findViewById(R.id.Or_list_rview);
+        RecyclerView.setHasFixedSize(true);
+        LayoutManager = new LinearLayoutManager(this);
+        Adapter = new OrAdapter(OrItemList);
+        RecyclerView.setLayoutManager(LayoutManager);
+        RecyclerView.setAdapter(Adapter);
+
+        Adapter.setOnItemClickListener(new OrAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                // TODO?
+            }
+        });
     }
 }
