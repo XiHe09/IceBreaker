@@ -9,7 +9,7 @@
 - Completed drawer menu and associated logic
 - Completed all action bar items
 
-Currently the app's main structures are all in place as well as layouts.\
+Currently the app's main structures are in place as well as layouts.\
 All navigation components are done and could be copy pasted to new screens as needed in future\
 iterations.\
 Many features rely on data base integration which is in a future sprint. However we included some\
