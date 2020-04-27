@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -112,6 +113,11 @@ public class IfActivity extends AppCompatActivity
                 // TODO?
             }
         });
+    }
+
+    public void onRandomCLick(View view) {
+        Intent intent = new Intent(IfActivity.this, IfRandom.class);
+        startActivity(intent);
     }
 
     // create clear action button

@@ -30,7 +30,24 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/If_list_rview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="473dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/go_random2"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:background="@color/b2"
+        android:onClick="onRandomCLick"
+        android:text="@string/random"
+        android:textColor="@android:color/background_light"
+
+        android:textSize="52sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </LinearLayout>

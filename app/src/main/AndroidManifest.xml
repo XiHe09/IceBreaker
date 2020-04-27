@@ -23,6 +23,7 @@
             android:parentActivityName="com.example.icebreaker.WActivity" />
         <activity android:name=".OrActivity" />
         <activity android:name=".GameActivity" />
+        <activity android:name=".IfActivity" />
         <activity
             android:name=".WRandom"
             android:parentActivityName="com.example.icebreaker.WActivity" />
