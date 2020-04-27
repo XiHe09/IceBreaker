@@ -1,10 +1,10 @@
 package com.example.icebreaker;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,14 +22,15 @@ public class OrAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public void setOnItemClickListener(OnItemClickListener listener) {
         Listener = listener;
     }
-    public class OrViewHolder1 extends RecyclerView.ViewHolder{
-        Button left;
-        Button right;
-        //Button middle = itemView.findViewById(R.id.Or_row1_middle);
-        public OrViewHolder1(@NonNull View itemView, final OnItemClickListener listener) {
+    public class OrViewHolder extends RecyclerView.ViewHolder{
+        public Button left;
+        public Button right;
+        public Button middle;
+        public OrViewHolder(@NonNull View itemView, final OnItemClickListener listener) {
             super(itemView);
-            this.left = itemView.findViewById(R.id.Or_row1_left);
-            this.right = itemView.findViewById(R.id.Or_row1_right);
+            this.left = itemView.findViewById(R.id.or_row_left);
+            this.right = itemView.findViewById(R.id.or_row_right);
+            this.middle = itemView.findViewById(R.id.or_row_middle);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -45,31 +46,11 @@ public class OrAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
     }
 
-    public static class OrViewHolder2 extends RecyclerView.ViewHolder {
-        Button left;
-        Button right;
-        //Button middle = itemView.findViewById(R.id.Or_row2_middle);
-        public OrViewHolder2(@NonNull View itemView, final OnItemClickListener listener) {
-            super(itemView);
-            left = itemView.findViewById(R.id.Or_row2_left);
-            right = itemView.findViewById(R.id.Or_row2_right);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (listener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            listener.onItemClick(position);
-                        }
-                    }
-                }
-            });
-        }
-    }
 
     public OrAdapter(ArrayList<WItem> OrList) {
         this.OrList = OrList;
     }
+
 
     @Override
     public int getItemViewType(int position) {
@@ -81,34 +62,33 @@ public class OrAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        //if the position is even, return the first layout type
-        //if the position is odd, return the second layout type
-        switch (viewType) {
-            case 0:
-                return new OrViewHolder1(LayoutInflater.from(parent.getContext()).inflate(R.layout.or_row1,
+        return new OrViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.or_row1,
                         parent, false), Listener);
-
-        }
-        return new OrViewHolder2(LayoutInflater.from(parent.getContext()).inflate(R.layout.or_row2,
-                parent, false), Listener);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         WItem currentItem = OrList.get(position);
+        holder.getAdapterPosition();
+        OrViewHolder orViewHolder = (OrViewHolder) holder;
+        orViewHolder.left.setText(currentItem.getQuestion().split("; ")[0]);
+        orViewHolder.right.setText(currentItem.getQuestion().split("; ")[1]);
+        currentItem.setDone(true);
+        System.out.println(holder.getItemViewType());
         switch (holder.getItemViewType()) {
             case 0:
-                OrViewHolder1 viewHolder1 = (OrViewHolder1) holder;
-                viewHolder1.left.setText(currentItem.getQuestion().split("; ")[0]);
-                viewHolder1.right.setText(currentItem.getQuestion().split("; ")[1]);
-                currentItem.setDone(true);
+                orViewHolder.left.setBackgroundColor(Color.parseColor("#FFFFFFFF"));
+                orViewHolder.left.setTextColor(Color.parseColor("#FFD185"));
+                orViewHolder.right.setBackgroundColor(Color.parseColor("#FFFFFFFF"));
+                orViewHolder.right.setTextColor(Color.parseColor("#FFD185"));
+                orViewHolder.middle.setBackgroundColor(Color.parseColor("#B8ADD4D2"));
                 break;
             case 1:
-
-                OrViewHolder2 viewHolder2 = (OrViewHolder2) holder;
-                viewHolder2.left.setText(currentItem.getQuestion().split("; ")[0]);
-                viewHolder2.right.setText(currentItem.getQuestion().split("; ")[1]);
-                currentItem.setDone(true);
+                orViewHolder.left.setBackgroundColor(Color.parseColor("#B8ADD4D2"));
+                orViewHolder.left.setTextColor(Color.parseColor("#FF9052"));
+                orViewHolder.right.setBackgroundColor(Color.parseColor("#B8ADD4D2"));
+                orViewHolder.right.setTextColor(Color.parseColor("#FF9052"));
+                orViewHolder.middle.setBackgroundColor(Color.parseColor("#FFFFFFFF"));
                 break;
         }
     }
