@@ -18,6 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".WActivity" />
+        <activity android:name=".Splash" />
+
         <activity
             android:name=".WSubActivity"
             android:parentActivityName="com.example.icebreaker.WActivity" />

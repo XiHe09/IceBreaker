@@ -29,10 +29,17 @@ public class MainActivity extends AppCompatActivity{
 //                setContentView(R.layout.home);
 //            }
 //        }.start();
+        startSplash();
         setContentView(R.layout.home);
         Toolbar toolbar = findViewById(R.id.HomeToolbar);
         toolbar.setTitle("Home");
         setSupportActionBar(toolbar);
+
+    }
+
+    public void startSplash() {
+        Intent intent = new Intent(MainActivity.this, Splash.class);
+        startActivity(intent);
     }
 
     public void w_clicked(View view) {
