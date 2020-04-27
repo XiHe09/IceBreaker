@@ -36,12 +36,13 @@
         android:layout_width="match_parent"
         android:layout_height="79dp"
         android:background="@color/b10"
+        android:onClick="orRandomClick"
         android:text="@string/random"
         android:textColor="@android:color/background_light"
+
         android:textSize="52sp"
 
         app:layout_constraintBottom_toBottomOf="parent"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

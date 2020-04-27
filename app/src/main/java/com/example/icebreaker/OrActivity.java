@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -19,8 +20,6 @@ import com.google.android.material.navigation.NavigationView;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-
-import static com.example.icebreaker.IfActivity.IfItemList;
 
 public class OrActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
@@ -93,6 +92,11 @@ public class OrActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void orRandomClick(View view) {
+        Intent intent = new Intent(OrActivity.this, OrRandom.class);
+        startActivity(intent);
     }
 
     public void populateList() {

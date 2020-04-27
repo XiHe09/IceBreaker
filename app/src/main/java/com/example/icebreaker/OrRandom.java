@@ -15,7 +15,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Random;
 
-public class ORRandom extends AppCompatActivity {
+public class OrRandom extends AppCompatActivity {
     public ArrayList<WItem> orItemList;
     public int size;
     @Override
