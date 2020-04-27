@@ -16,8 +16,8 @@ import java.util.Comparator;
 import java.util.Random;
 
 public class IfRandom extends AppCompatActivity {
-    public ArrayList<WItem> ifItemList;
-    public int size;
+    public static ArrayList<WItem> ifItemList;
+    public static int size;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +33,14 @@ public class IfRandom extends AppCompatActivity {
     }
 
     public void createArrayList() {
+        if (ifItemList == null) {
+            ifItemList = new ArrayList<>();
+            createStringArrays(R.array.If_list);
+            size = ifItemList.size();
+        }
+    }
+
+    public void clearArrayList() {
         ifItemList = new ArrayList<>();
         createStringArrays(R.array.If_list);
         size = ifItemList.size();
@@ -83,7 +91,7 @@ public class IfRandom extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        createArrayList();
+        clearArrayList();
         TextView tv = (TextView) findViewById(R.id.textView2);
         tv.setText(R.string.CLICKNEXT);
         return super.onOptionsItemSelected(item);

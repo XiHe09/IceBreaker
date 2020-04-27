@@ -16,8 +16,8 @@ import java.util.Collections;
 import java.util.Random;
 
 public class WRandom extends AppCompatActivity {
-    public ArrayList<WItem> wItemList;
-    public int size;
+    public static ArrayList<WItem> wItemList;
+    public static int size;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +33,18 @@ public class WRandom extends AppCompatActivity {
     }
 
     public void createArrayList() {
+        if (wItemList == null) {
+            wItemList = new ArrayList<>();
+            createStringArrays(R.array.what_list);
+            createStringArrays(R.array.where_list);
+            createStringArrays(R.array.who_list);
+            createStringArrays(R.array.when_list);
+            createStringArrays(R.array.why_list);
+            size = wItemList.size();
+        }
+    }
+
+    public void clearArrayList() {
         wItemList = new ArrayList<>();
         createStringArrays(R.array.what_list);
         createStringArrays(R.array.where_list);
@@ -40,9 +52,6 @@ public class WRandom extends AppCompatActivity {
         createStringArrays(R.array.when_list);
         createStringArrays(R.array.why_list);
         size = wItemList.size();
-        for (WItem w : wItemList) {
-            System.out.println(w.getQuestion());
-        }
     }
 
     public void showNext(View view) {
@@ -61,6 +70,7 @@ public class WRandom extends AppCompatActivity {
             }
         }
     }
+
     public void createStringArrays(int res_id) {
         for (String question : getResources().getStringArray(res_id)) {
             wItemList.add(new WItem(false, question));
@@ -90,7 +100,7 @@ public class WRandom extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        createArrayList();
+        clearArrayList();
         TextView tv = (TextView) findViewById(R.id.textView2);
         tv.setText(R.string.CLICKNEXT);
         return super.onOptionsItemSelected(item);
