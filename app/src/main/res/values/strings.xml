@@ -61,4 +61,5 @@
     </string-array>
     <string name="hot_potato_instruction">If you lose, say something interesting about yourself!</string>
     <string name="START_GAME">Start!</string>
+    <string name="randomr">Random!</string>
 </resources>

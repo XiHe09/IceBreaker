@@ -94,4 +94,9 @@ public class WActivity extends AppCompatActivity
         intent.putExtra(getString(R.string.w_intent_key),"WHERE");
         startActivity(intent);
     }
+
+    public void random_clicked(View view) {
+        Intent intent = new Intent(WActivity.this, WRandom.class);
+        startActivity(intent);
+    }
 }
