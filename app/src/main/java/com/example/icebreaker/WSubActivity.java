@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -87,6 +90,7 @@ public class WSubActivity extends AppCompatActivity {
         buildRecyclerView();
     }
 
+
     // TODO iteration 2: current dummy populate w list from data in resources, replace with database later
     public void populateList(int res_id) {
         wItemList = new ArrayList<>();
@@ -124,9 +128,20 @@ public class WSubActivity extends AppCompatActivity {
             for (WItem witem: wItemList) {
                 witem.setDone(false);
             }
+            clear();
         }
         return super.onOptionsItemSelected(item);
     }
+
+    public void clear() {
+        RecyclerView mListView = (RecyclerView) findViewById(R.id.w_list_rview);
+        for (int i = 0; i < mListView.getChildCount(); i++) {
+            View mChild = mListView.getChildAt(i);
+            CheckBox mCheckBox = (CheckBox) mChild.findViewById(R.id.w_checkbox);
+            mCheckBox.setChecked(false);
+        }
+    }
+
 
     public void buildRecyclerView() {
         RecyclerView = findViewById(R.id.w_list_rview);
@@ -135,7 +150,6 @@ public class WSubActivity extends AppCompatActivity {
         Adapter = new WAdapter(wItemList);
         RecyclerView.setLayoutManager(LayoutManager);
         RecyclerView.setAdapter(Adapter);
-
         Adapter.setOnItemClickListener(new WAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {

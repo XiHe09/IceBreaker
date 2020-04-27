@@ -29,22 +29,21 @@ public class IfRandom extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         createArrayList();
-        //showNext(this.getCurrentFocus());
     }
 
 
 
     public void createArrayList() {
-        if (ifItemList.isEmpty()) {
+        if (ifItemList == null) {
             ifItemList = new ArrayList<>();
-            createStringArrays(R.array.If_list);
+            createStringArrays(R.array.if_list);
             size = ifItemList.size();
         }
     }
 
     public void clearArrayList() {
         ifItemList = new ArrayList<>();
-        createStringArrays(R.array.If_list);
+        createStringArrays(R.array.if_list);
         size = ifItemList.size();
     }
 
@@ -53,14 +52,15 @@ public class IfRandom extends AppCompatActivity {
         TextView tv = (TextView) findViewById(R.id.textView2);
         if (size == 0) {
             tv.setText(R.string.ALLDONE);
-        }
-        while (done && size > 0) {
-            final int random = new Random().nextInt(size);
-            if (!ifItemList.get(random).isDone()) {
-                tv.setText(ifItemList.get(random).getQuestion());
-                ifItemList.remove(random);
-                size--;
-                done = false;
+        } else {
+            while (done && size > 0) {
+                final int random = new Random().nextInt(size);
+                if (!ifItemList.get(random).isDone()) {
+                    tv.setText(ifItemList.get(random).getQuestion());
+                    ifItemList.remove(random);
+                    size--;
+                    done = false;
+                }
             }
         }
     }
@@ -93,9 +93,11 @@ public class IfRandom extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        clearArrayList();
-        TextView tv = (TextView) findViewById(R.id.textView2);
-        tv.setText(R.string.CLICKNEXT);
+        if (id == R.id.clear_button) {
+            clearArrayList();
+            TextView tv = (TextView) findViewById(R.id.textView2);
+            tv.setText(R.string.CLICKNEXT);
+        }
         return super.onOptionsItemSelected(item);
     }
 

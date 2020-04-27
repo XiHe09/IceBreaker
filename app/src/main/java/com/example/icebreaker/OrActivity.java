@@ -1,10 +1,13 @@
 package com.example.icebreaker;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -64,9 +67,21 @@ public class OrActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.clear_button) {
-            // TODO clear OR
+            for (WItem w : OrItemList) {
+                w.setDone(false);
+            }
+            clear();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void clear() {
+        RecyclerView mListView = (RecyclerView) findViewById(R.id.Or_list_rview);
+        for (int i = 0; i < mListView.getChildCount(); i++) {
+            View mChild = mListView.getChildAt(i);
+            Button button = (Button) mChild.findViewById(R.id.or_row_middle);
+            button.setTextColor(Color.parseColor("#26547C"));
+        }
     }
 
     @Override

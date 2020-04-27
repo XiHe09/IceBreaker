@@ -29,11 +29,10 @@ public class OrRandom extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         createArrayList();
-        //showNext(this.getCurrentFocus());
     }
 
     public void createArrayList() {
-        if (orItemList.isEmpty()) {
+        if (orItemList == null) {
             orItemList = new ArrayList<>();
             createStringArrays(R.array.Or_list);
             size = orItemList.size();
@@ -51,14 +50,15 @@ public class OrRandom extends AppCompatActivity {
         TextView tv = (TextView) findViewById(R.id.textView2);
         if (size == 0) {
             tv.setText(R.string.ALLDONE);
-        }
-        while (done && size > 0) {
-            final int random = new Random().nextInt(size);
-            if (!orItemList.get(random).isDone()) {
-                tv.setText(orItemList.get(random).getQuestion());
-                orItemList.remove(random);
-                size--;
-                done = false;
+        } else {
+            while (done && size > 0) {
+                final int random = new Random().nextInt(size);
+                if (!orItemList.get(random).isDone()) {
+                    tv.setText(orItemList.get(random).getQuestion());
+                    orItemList.remove(random);
+                    size--;
+                    done = false;
+                }
             }
         }
     }
@@ -92,9 +92,11 @@ public class OrRandom extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        clearArrayList();
-        TextView tv = (TextView) findViewById(R.id.textView2);
-        tv.setText(R.string.CLICKNEXT);
+        if (id == R.id.clear_button) {
+            clearArrayList();
+            TextView tv = (TextView) findViewById(R.id.textView2);
+            tv.setText(R.string.CLICKNEXT);
+        }
         return super.onOptionsItemSelected(item);
     }
 

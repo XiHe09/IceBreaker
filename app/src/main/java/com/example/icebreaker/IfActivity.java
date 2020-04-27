@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CheckBox;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -106,7 +107,6 @@ public class IfActivity extends AppCompatActivity
         Adapter = new WAdapter(IfItemList);
         RecyclerView.setLayoutManager(LayoutManager);
         RecyclerView.setAdapter(Adapter);
-
         Adapter.setOnItemClickListener(new WAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
@@ -136,8 +136,18 @@ public class IfActivity extends AppCompatActivity
             for (WItem witem: wItemList) {
                 witem.setDone(false);
             }
+            clear();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void clear() {
+        RecyclerView mListView = (RecyclerView) findViewById(R.id.If_list_rview);
+        for (int i = 0; i < mListView.getChildCount(); i++) {
+            View mChild = mListView.getChildAt(i);
+            CheckBox mCheckBox = (CheckBox) mChild.findViewById(R.id.w_checkbox);
+            mCheckBox.setChecked(false);
+        }
     }
 
 }

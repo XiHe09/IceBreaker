@@ -39,18 +39,29 @@
 
     <string-array name="when_list">
         <item>Placeholder</item>
+        <item>Placeholder</item>
+        <item>Placeholder</item>
+        <item>Placeholder</item>
+        <item>Placeholder</item>
+
     </string-array>
 
     <string-array name="why_list">
         <item>Placeholder</item>
+        <item>Placeholder</item>
+        <item>Placeholder</item>
+        <item>Placeholder</item>
+        <item>Placeholder</item>
+
     </string-array>
 
     <string-array name="where_list">
         <item>Placeholder</item>
-    </string-array>
-
-    <string-array name="if_list">
         <item>Placeholder</item>
+        <item>Placeholder</item>
+        <item>Placeholder</item>
+        <item>Placeholder</item>
+
     </string-array>
 
     <string-array name="Or_list">
@@ -60,7 +71,7 @@
         <item>MARVEL; DC</item>
     </string-array>
 
-    <string-array name="If_list">
+    <string-array name="if_list">
         <item>If you had a million dollars, what would you do?</item>
         <item>If you could live anywhere, where would you live?</item>
         <item>If you could be an animal, which one would you be?</item>
