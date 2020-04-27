@@ -72,12 +72,12 @@ public class GameActivity extends AppCompatActivity
 
     public void createInPersonView() {
         setContentView(R.layout.g_content2);
-        ImageView myImage = (ImageView) findViewById(R.id.potatoView);
-        myImage.setImageResource(R.mipmap.potato);
         final Button button = (Button) findViewById(R.id.startButton);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // your handler code here
+                ImageView myImage = (ImageView) findViewById(R.id.potatoView);
+                myImage.setImageResource(R.mipmap.potato_foreground);
                 button.setVisibility(View.GONE);
                 final int random = new Random().nextInt(21) + 5;
                 new CountDownTimer(random * 1000, 1000) {
@@ -88,7 +88,7 @@ public class GameActivity extends AppCompatActivity
 
                     public void onFinish() {
                         ImageView myImage = (ImageView) findViewById(R.id.potatoView);
-                        myImage.setImageResource(R.mipmap.redpotato);
+                        myImage.setImageResource(R.mipmap.redpotato_foreground);
                         button.setVisibility(View.VISIBLE);
                     }
                 }.start();
