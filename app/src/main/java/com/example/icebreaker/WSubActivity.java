@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -24,7 +25,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class WSubActivity extends AppCompatActivity {X
+public class WSubActivity extends AppCompatActivity {
         //implements NavigationView.OnNavigationItemSelectedListener{
     private RecyclerView RecyclerView;
     private WAdapter Adapter;
@@ -39,7 +40,9 @@ public class WSubActivity extends AppCompatActivity {X
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+
 
         /*DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
