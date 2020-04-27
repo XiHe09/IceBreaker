@@ -50,7 +50,7 @@ public class GameActivity extends AppCompatActivity
     }
 
     public void createOnlineView() {
-        setContentView(R.layout.g_content);
+        setContentView(R.layout.game_activity);
         Toolbar toolbar = findViewById(R.id.WToolbar);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
@@ -85,7 +85,7 @@ public class GameActivity extends AppCompatActivity
     }
 
     public void createInPersonView() {
-        setContentView(R.layout.g_content2);
+        setContentView(R.layout.game_activity2);
         Toolbar toolbar = findViewById(R.id.WToolbar);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
