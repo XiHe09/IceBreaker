@@ -19,6 +19,8 @@ public class OrAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         void onItemClick(int position);
     }
 
+
+
     public void setOnItemClickListener(OnItemClickListener listener) {
         Listener = listener;
     }
@@ -32,17 +34,20 @@ public class OrAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             this.right = itemView.findViewById(R.id.or_row_right);
             this.middle = itemView.findViewById(R.id.or_row_middle);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
+            middle.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (listener != null) {
                         int position = getAdapterPosition();
                         if (position != RecyclerView.NO_POSITION) {
-                            listener.onItemClick(position);
+                            //listener.onItemClick(position);
+                            middle.setTextColor(Color.parseColor("#969FAA"));
                         }
                     }
                 }
             });
+
+
         }
     }
 
