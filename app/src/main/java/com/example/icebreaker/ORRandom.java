@@ -8,20 +8,20 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-        import androidx.appcompat.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 
 import java.util.ArrayList;
 import java.util.Collections;
-        import java.util.Comparator;
+import java.util.Comparator;
 import java.util.Random;
 
-public class WRandom extends AppCompatActivity {
-    public ArrayList<WItem> wItemList;
+public class ORRandom extends AppCompatActivity {
+    public ArrayList<WItem> orItemList;
     public int size;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.wquestioncards);
+        setContentView(R.layout.orquestioncards);
         Toolbar toolbar = findViewById(R.id.WToolbar2);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
@@ -33,16 +33,9 @@ public class WRandom extends AppCompatActivity {
     }
 
     public void createArrayList() {
-        wItemList = new ArrayList<>();
-        createStringArrays(R.array.what_list);
-        createStringArrays(R.array.where_list);
-        createStringArrays(R.array.who_list);
-        createStringArrays(R.array.when_list);
-        createStringArrays(R.array.why_list);
-        size = wItemList.size();
-        for (WItem w : wItemList) {
-            System.out.println(w.getQuestion());
-        }
+        orItemList = new ArrayList<>();
+        createStringArrays(R.array.Or_list);
+        size = orItemList.size();
     }
 
     public void showNext(View view) {
@@ -53,9 +46,9 @@ public class WRandom extends AppCompatActivity {
         }
         while (done && size > 0) {
             final int random = new Random().nextInt(size);
-            if (!wItemList.get(random).isDone()) {
-                tv.setText(wItemList.get(random).getQuestion());
-                wItemList.remove(random);
+            if (!orItemList.get(random).isDone()) {
+                tv.setText(orItemList.get(random).getQuestion());
+                orItemList.remove(random);
                 size--;
                 done = false;
             }
@@ -63,9 +56,9 @@ public class WRandom extends AppCompatActivity {
     }
     public void createStringArrays(int res_id) {
         for (String question : getResources().getStringArray(res_id)) {
-            wItemList.add(new WItem(false, question));
+            orItemList.add(new WItem(false, question));
         }
-        Collections.sort(wItemList, new Comparator<WItem>() {
+        Collections.sort(orItemList, new Comparator<WItem>() {
             @Override
             public int compare(WItem o1, WItem o2) {
                 if (o1.isDone() == o2.isDone()) {
