@@ -1,5 +1,7 @@
 # TeamB-IceBreaker
-## Iteration 1
+The IceBreaer is an app that serve as the platform to break awkward silence between strangers through generating interesting questions and games. The target users include those looking to kill time with some friends and recruiters, counserlors, and managers from a professional setting to kill times. 
+
+The progress that we have so far:
 - Completed Main Screen
 - Completed "W" layout and basic logic
 - Added demo list items to "W" (specifically WHO and WHY)
@@ -8,13 +10,18 @@
 - Added tic-tac-toe to online game
 - Completed drawer menu and associated logic
 - Completed all action bar items
+- Completed lists of questions 
+- Completed detailed implementation of "W"
+- Completed detailed implementation of "OR"
+- Completed detailed implementation of "If"
+- Completed detailed implementation for "Game"
+- Finalized README
 
-Currently the app's main structures are in place as well as layouts.\
-All navigation components are done and could be copy pasted to new screens as needed in future\
-iterations.\
-Many features rely on data base integration which is in a future sprint. However we included some\
-temporary hard coded data in the local resources for "WHAT" and "WHO".\
-Clear button does not work yet because implementing it without a database in place is not a good\
-use of development time, but button logic are all in place and could be done easily.
+The functions that we have completed so far: 
+- Questions generating ability 
+- Colorblind friendly featrues
+- Ice Breaking Games
+- Ice Breaking Activities 
+- Various general types of games and activities 
 
-
+In its current state, our application is fairly functional. The main structures are in place as well as layouts. With its flexible design, it could be readily expanded to include more online games, in-person games, and questions for each category. In the future, we could also implement the ability for users to enter their questions and try to connect with online icebreaking databases in access for more most recent and updated questions. 
