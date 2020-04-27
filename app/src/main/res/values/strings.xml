@@ -59,8 +59,14 @@
         <item>DOG; CAT</item>
         <item>MARVEL; DC</item>
     </string-array>
+    <string-array name="If_list">
+        <item>If you had a million dollars, what would you do?</item>
+        <item>If you could live anywhere, where would you live?</item>
+        <item>If you could be an animal, which one would you be?</item>
+    </string-array>
     <string name="hot_potato_instruction">If you lose, say something interesting about yourself!</string>
     <string name="START_GAME">Start!</string>
     <string name="randomr">Random!</string>
     <string name="ALLDONE">All questions asked!</string>
+    <string name="CLICKNEXT">Click Next to Show a Question</string>
 </resources>

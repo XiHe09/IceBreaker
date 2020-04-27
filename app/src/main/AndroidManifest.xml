@@ -26,7 +26,11 @@
         <activity
             android:name=".WRandom"
             android:parentActivityName="com.example.icebreaker.WActivity" />
-        <activity android:name=".OrRandom" />
+        <activity android:name=".OrRandom"
+            android:parentActivityName="com.example.icebreaker.OrActivity" />
+        <activity android:name=".IfRandom"
+            android:parentActivityName="com.example.icebreaker.IfActivity" />
+
 
 
     </application>

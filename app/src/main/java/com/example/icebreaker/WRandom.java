@@ -91,6 +91,8 @@ public class WRandom extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         createArrayList();
+        TextView tv = (TextView) findViewById(R.id.textView2);
+        tv.setText(R.string.CLICKNEXT);
         return super.onOptionsItemSelected(item);
     }
 

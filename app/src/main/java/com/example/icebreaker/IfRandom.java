@@ -15,13 +15,13 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Random;
 
-public class OrRandom extends AppCompatActivity {
-    public ArrayList<WItem> orItemList;
+public class IfRandom extends AppCompatActivity {
+    public ArrayList<WItem> ifItemList;
     public int size;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.orquestioncards);
+        setContentView(R.layout.ifquestioncards);
         Toolbar toolbar = findViewById(R.id.WToolbar2);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
@@ -33,9 +33,9 @@ public class OrRandom extends AppCompatActivity {
     }
 
     public void createArrayList() {
-        orItemList = new ArrayList<>();
-        createStringArrays(R.array.Or_list);
-        size = orItemList.size();
+        ifItemList = new ArrayList<>();
+        createStringArrays(R.array.If_list);
+        size = ifItemList.size();
     }
 
     public void showNext(View view) {
@@ -46,9 +46,9 @@ public class OrRandom extends AppCompatActivity {
         }
         while (done && size > 0) {
             final int random = new Random().nextInt(size);
-            if (!orItemList.get(random).isDone()) {
-                tv.setText(orItemList.get(random).getQuestion());
-                orItemList.remove(random);
+            if (!ifItemList.get(random).isDone()) {
+                tv.setText(ifItemList.get(random).getQuestion());
+                ifItemList.remove(random);
                 size--;
                 done = false;
             }
@@ -56,10 +56,9 @@ public class OrRandom extends AppCompatActivity {
     }
     public void createStringArrays(int res_id) {
         for (String question : getResources().getStringArray(res_id)) {
-            String add = question.replace(";", " or");
-            orItemList.add(new WItem(false, add));
+            ifItemList.add(new WItem(false, question));
         }
-        Collections.sort(orItemList, new Comparator<WItem>() {
+        Collections.sort(ifItemList, new Comparator<WItem>() {
             @Override
             public int compare(WItem o1, WItem o2) {
                 if (o1.isDone() == o2.isDone()) {

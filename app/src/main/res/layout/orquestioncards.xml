@@ -40,7 +40,7 @@
                 android:layout_marginBottom="16dp"
                 android:background="#D0E2E6"
                 android:gravity="center"
-                android:text="temp"
+                android:text="@string/CLICKNEXT"
                 android:textSize="36sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/button13"
