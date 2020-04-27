@@ -23,44 +23,61 @@ import androidx.annotation.NonNull;
         import java.io.File;
         import java.io.FileNotFoundException;
         import java.util.ArrayList;
-        import java.util.Collections;
+import java.util.Arrays;
+import java.util.Collections;
         import java.util.Comparator;
 import java.util.Random;
 import java.util.Scanner;
 
 public class WRandom extends AppCompatActivity {
-    public static ArrayList<WItem> wItemList;
+    public ArrayList<WItem> wItemList;
     public int size;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.questioncards);
-        Toolbar toolbar = findViewById(R.id.WToolbar);
+        Toolbar toolbar = findViewById(R.id.WToolbar2);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+        createArrayList();
+        //showNext(this.getCurrentFocus());
+    }
+
+    public void createArrayList() {
+        wItemList = new ArrayList<>();
         createStringArrays(R.array.what_list);
         createStringArrays(R.array.where_list);
         createStringArrays(R.array.who_list);
         createStringArrays(R.array.when_list);
         createStringArrays(R.array.why_list);
         size = wItemList.size();
-        showNext(getWindow().getCurrentFocus().getRootView());
+        for (WItem w : wItemList) {
+            System.out.println(w.getQuestion());
+        }
     }
 
     public void showNext(View view) {
-        final int random = new Random().nextInt(size);
+        boolean done = true;
         TextView tv = (TextView) findViewById(R.id.textView2);
-        tv.setText(wItemList.get(random).getQuestion());
-
+        if (size == 0) {
+            tv.setText(R.string.ALLDONE);
+        }
+        while (done && size > 0) {
+            final int random = new Random().nextInt(size);
+            if (!wItemList.get(random).isDone()) {
+                tv.setText(wItemList.get(random).getQuestion());
+                wItemList.remove(random);
+                size--;
+                done = false;
+            }
+        }
     }
     public void createStringArrays(int res_id) {
-        wItemList = new ArrayList<>();
         for (String question : getResources().getStringArray(res_id)) {
             wItemList.add(new WItem(false, question));
-            System.out.println("Added item: " + question);
         }
         Collections.sort(wItemList, new Comparator<WItem>() {
             @Override
@@ -87,12 +104,7 @@ public class WRandom extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-
-        if (id == R.id.clear_button) {
-            for (WItem witem: wItemList) {
-                witem.setDone(false);
-            }
-        }
+        createArrayList();
         return super.onOptionsItemSelected(item);
     }
 
