@@ -40,7 +40,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/b11"
-            android:onClick="onlineClicked"
             android:text="@string/ONLINE" />
 
         <Button

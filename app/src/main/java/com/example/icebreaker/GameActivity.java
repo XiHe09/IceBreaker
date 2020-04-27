@@ -30,7 +30,7 @@ public class GameActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.game_activity);
+        /*setContentView(R.layout.game_activity);
         Toolbar toolbar = findViewById(R.id.GToolbar);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
@@ -44,20 +44,20 @@ public class GameActivity extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setNavigationItemSelectedListener(this);*/
 
         createOnlineView();
     }
 
     public void createOnlineView() {
         setContentView(R.layout.game_activity);
-        Toolbar toolbar = findViewById(R.id.WToolbar);
+        Toolbar toolbar = findViewById(R.id.GToolbar);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout2);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -86,13 +86,13 @@ public class GameActivity extends AppCompatActivity
 
     public void createInPersonView() {
         setContentView(R.layout.game_activity2);
-        Toolbar toolbar = findViewById(R.id.WToolbar);
+        Toolbar toolbar = findViewById(R.id.GToolbar);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout3);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
