@@ -29,57 +29,137 @@
         <item>What movie do you pretend is your favorite to sound cultured?</item>
         <item>What is in the trunk of your car right now?</item>
         <item>What is the best gift anyone\'s ever given you?</item>
+        <item>What is the best piece of advice you have ever been given?</item>
+        <item>What is your favorite item you've bought this year?</item>
+        <item>What would be the most surprising scientific discovery imaginable?</item>
+        <item>What is your absolute dream job?</item>
+        <item>What did you eat for breakfast?</item>
+        <item>What is your most used emoji?</item>
+        <item>What was the worst style choice you ever made?</item>
+        <item>What was the worst haircut you ever had?</item>
+        <item>What would your dream house be like?</item>
+
+
     </string-array>
 
     <string-array name="who_list">
         <item>Who do you admire the most?</item>
         <item>Who is your favorite actor?</item>
         <item>Who is your favorite fictional character?</item>
+        <item>Who is the better businessman or business woman and why? </item>
+        <item>Who was your childhood actor/actress crush?</item>
+        <item>Who was the worst grade-school teacher you ever had?</item>
+        <item>Who is your craziest/most interesting relative?</item>
+        <item>Who is your celebrity look-alike?</item>
+
     </string-array>
 
     <string-array name="when_list">
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-
+        <item>When you die, what do you want to be remembered for?</item>
+        <item>When is the most interesting period in history?</item>
+        <item>When it comes to fixing things,how handy are you?</item>
+        <item>When nobody else is listening, what are your favorite songs from your teenage years that you still rock out?</item>
+        <item>When you wake  up in the morning, what is the first thing you think of?</item>
+        <item>When did you first notice that you were already an adult?</item>
     </string-array>
 
     <string-array name="why_list">
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-
+        <item>Do you think you rely too heavily on your phone? Why or why not?</item>
+        <item>Do you prefer pens or pencils? Why?</item>
+        <item>Why are you here today?</item>
+        <item>Visit any planet, which one would you choose and why?</item>
     </string-array>
 
     <string-array name="where_list">
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-
+        <item>Where do you keep your books?</item>
+        <item>Where do you buy your dresses?</item>
+        <item>Where is the most interesting place you have been?</item>
+        <item>Where do you go shopping for Christmas?</item>
+        <item>Are you traveling for Christmas? If so, where to?</item>
+        <item>Where is the last place you would be caught dead?</item>
+        <item>Where do you want to travel in the future</item>
     </string-array>
 
     <string-array name="Or_list">
         <item>APPLE; BANANA</item>
         <item>SEA; BEACH</item>
         <item>DOG; CAT</item>
+        <item>NETFLIX; YOUTUBE</item>
+        <item>PHONE CALL; TEXT</item>
+        <item>CARDIO; WEIGHTS</item>
+        <item>TOAST; EGGS</item>
+        <item>FACEBOOK; TWITTER</item>
+        <item>IOS; ANDROID</item>
+        <item>FORM; FUNCTION</item>
+        <item>POP; INDIE</item>
+        <item>CAKE; PIE</item>
+        <item>BLUE; RED</item>
+        <item>CANDY; POPCORN</item>
+        <item>PANCAKE; WAFFLE</item>
+        <item>COKE; PEPSI</item>
+        <item>TRAIN; PLANE</item>
+        <item>ICED COFFEE; HOT COFFEE</item>
+        <item>MEAT; VEGETABLE</item>
+        <item>SAVE; SPEND</item>
+        <item>HONESTY; OTHER'S FEELINGS</item>
+        <item>COFFEE; TEA</item>
+        <item>TV; BOOK</item>
+        <item>CITY; COUNTRYSIDE</item>
+        <item>MAC; PC</item>
+        <item>BEER; WINE</item>
+        <item>WORKING ALONE; IN A TEAM</item>
+        <item>DINE IN; DELIVERY</item>
+        <item>SWEATER; HOODIE</item>
+        <item>NINJAS; PIRATES </item>
+        <item>HIGH-TECH; LOW-TECH</item>
+        <item>BIG PARTY; SMALL GATHERING</item>
+        <item>NEW CLOTHES; NEW PHONE</item>
+        <item>FOOTBALL; BASKETBALL</item>
+        <item>JOGGING; HIKING</item>
+        <item>BATH; SHOWER</item>
+        <item>HAMBURGER; TACO</item>
+        <item>PASSENGER; DRIVER</item>
         <item>MARVEL; DC</item>
-    </string-array>
+        <item>JUSTIN BIEBER; JUSTIN TIMBERLAKE</item>
+        <item>RAIN; SUN</item>
+        <item>WINTER; SUMMER</item>
+        <item>ICE CREAM; MOCHI</item>
+        <item>DOVE; HERSHEY</item>
+        <item>FRUIT; VEGETABLE</item>
+        <item>SUN; MOON</item>
+        <item>TRAVEL BACK; TO THE FUTURE</item>
+        <item>INVISIBILITY; FLIGHT</item>
+        <item>SLIGHTLY LATE; SUPER EARLY</item>
 
-    <string-array name="if_list">
+    </string-array>
+    <string-array name="If_list">
         <item>If you had a million dollars, what would you do?</item>
         <item>If you could live anywhere, where would you live?</item>
         <item>If you could be an animal, which one would you be?</item>
-    </string-array>
+        <item>If you could hang out with any cartoon character, who would you choose and why?</item>
+        <item>If you could live anywhere in the world for a year, where would it be?</item>
+        <item>If you could commit any crime and get away with it what would you choose and why?</item>
+        <item>If you could choose any person from history to be your imaginary friend, who would it be and why?</item>
+        <item>If you could see one movie again for the first time, what would it be and why?</item>
+        <item>If you could bring back any fashion trend what would it be?</item>
+        <item>If you could live in any country, where would you live?</item>
+        <item>If you could choose any two famous people to have dinner with who would they be?</item>
+        <item>If you could rename yourself, what name would you pick?</item>
+        <item>ou could have someone follow you around all the time, like a personal assistant, what would you have them do?</item>
+        <item>If you had to teach a class on one thing, what would you teach?</item>
+        <item>If you could magically become fluent in any language, what would it be?</item>
+        <item>If you could be immortal, what age would you choose to stop aging at and why?</item>
+        <item>If you could be on a reality TV show, which one would you choose and why?</item>
+        <item>If you could choose any person from history to be your imaginary friend, who would it be and why?</item>
+        <item>If you could go to Mars, would you? Why or why not?</item>
+        <item>If you could have the power of teleportation right now, where would you go and why?</item>
+        <item>If you could write a book that was guaranteed to be a best seller, what would you write?</item>
 
+    </string-array>
     <string name="hot_potato_instruction">If you lose, say something interesting about yourself!</string>
     <string name="START_GAME">Start!</string>
     <string name="randomr">Random!</string>
     <string name="ALLDONE">All questions asked!</string>
     <string name="CLICKNEXT">Click Next to Show a Question</string>
 </resources>
+
