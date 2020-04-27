@@ -32,8 +32,10 @@ public class IfRandom extends AppCompatActivity {
         //showNext(this.getCurrentFocus());
     }
 
+
+
     public void createArrayList() {
-        if (ifItemList == null) {
+        if (ifItemList.isEmpty()) {
             ifItemList = new ArrayList<>();
             createStringArrays(R.array.If_list);
             size = ifItemList.size();

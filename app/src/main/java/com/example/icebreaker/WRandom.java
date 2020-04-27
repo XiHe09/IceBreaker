@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;
-        import java.util.Comparator;
+import java.util.Comparator;
 import java.util.Random;
 
 public class WRandom extends AppCompatActivity {
@@ -33,7 +33,7 @@ public class WRandom extends AppCompatActivity {
     }
 
     public void createArrayList() {
-        if (wItemList == null) {
+        if (wItemList.isEmpty()) {
             wItemList = new ArrayList<>();
             createStringArrays(R.array.what_list);
             createStringArrays(R.array.where_list);

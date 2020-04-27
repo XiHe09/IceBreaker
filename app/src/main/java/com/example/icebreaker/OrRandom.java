@@ -33,7 +33,7 @@ public class OrRandom extends AppCompatActivity {
     }
 
     public void createArrayList() {
-        if (orItemList == null) {
+        if (orItemList.isEmpty()) {
             orItemList = new ArrayList<>();
             createStringArrays(R.array.Or_list);
             size = orItemList.size();
