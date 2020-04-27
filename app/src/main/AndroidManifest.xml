@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".WActivity"></activity>
-        <activity android:name=".WSubActivity"></activity>
+        <activity android:name=".WSubActivity"
+            android:parentActivityName="com.example.icebreaker.WActivity" ></activity>
         <activity android:name=".OrActivity"></activity>
         <activity android:name=".GameActivity"></activity>
 
