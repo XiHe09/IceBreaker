@@ -56,7 +56,8 @@ public class OrRandom extends AppCompatActivity {
     }
     public void createStringArrays(int res_id) {
         for (String question : getResources().getStringArray(res_id)) {
-            orItemList.add(new WItem(false, question));
+            String add = question.replace(";", " or");
+            orItemList.add(new WItem(false, add));
         }
         Collections.sort(orItemList, new Comparator<WItem>() {
             @Override
