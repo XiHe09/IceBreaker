@@ -36,14 +36,14 @@ public class IfRandom extends AppCompatActivity {
     public void createArrayList() {
         if (ifItemList == null) {
             ifItemList = new ArrayList<>();
-            createStringArrays(R.array.if_list);
+            createStringArrays(R.array.If_list);
             size = ifItemList.size();
         }
     }
 
     public void clearArrayList() {
         ifItemList = new ArrayList<>();
-        createStringArrays(R.array.if_list);
+        createStringArrays(R.array.If_list);
         size = ifItemList.size();
     }
 

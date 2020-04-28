@@ -82,7 +82,7 @@ public class IfActivity extends AppCompatActivity
 
     public void populateList() {
         IfItemList = new ArrayList<>();
-        for (String question: getResources().getStringArray(R.array.if_list)) {
+        for (String question: getResources().getStringArray(R.array.If_list)) {
             IfItemList.add(new WItem(false, question));
             System.out.println("Added item: "+question);
         }
