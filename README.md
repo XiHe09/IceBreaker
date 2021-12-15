@@ -2,14 +2,14 @@
 The IceBreaer is an app that serve as the platform to break awkward silence between strangers through generating interesting questions and games. The target users include those looking to kill time with some friends and recruiters, counserlors, and managers from a professional setting to kill times. 
 
 The progress that we have so far:
-- Completed Splash Screen (Kevin)
+- Completed Splash Screen (Bella)
 - Completed Random Implementation for "If" (Kevin)
 - Completed Random Implementation for "Or" (Kevin)
 - Completed Random Implementation for "W" (Kevin)
 - Completed "W" layout and basic logic (Kevin)
 - Added demo list items to "W" (specifically WHO and WHY)
-- Completed "OR" layout (Kevin)
-- Completed "Game" layout (Kevin)
+- Completed "OR" layout (Bella)
+- Completed "Game" layout (Bella)
 - Added tic-tac-toe to online game (Kevin)
 - Added the in-person game (Kevin)
 - Completed drawer menu and associated logic (William)
@@ -21,7 +21,7 @@ The progress that we have so far:
 - Completed detailed implementation of "W" + adapter (William)
 - Completed implementation of "OR" page (Emily)
 - Completed detailed implementation of "If" (William / Emily)
-- Added Hot Potato to "Game" layout (Kevin)
+- Added Hot Potato to "Game" layout (Bella)
 - Finalized README (Bella)
 
 The functions that we have completed so far: 
